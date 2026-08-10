@@ -132,8 +132,13 @@
   .support-strip{
     background:var(--paper-dim);border-bottom:1px solid var(--line);padding:22px 0;
   }
-  .support-strip .logos{display:flex;align-items:center;gap:34px;flex-wrap:wrap;justify-content:center;}
-  .support-strip img{height:42px;width:auto;filter:grayscale(0.15);}
+  .support-strip .logos{display:flex;align-items:stretch;gap:20px;flex-wrap:wrap;justify-content:center;}
+  .support-strip .logo-box{
+    display:flex;align-items:center;justify-content:center;
+    background:#fff;border:2px solid var(--line);border-radius:var(--radius);
+    padding:14px 26px;
+  }
+  .support-strip img{height:40px;width:auto;max-width:120px;object-fit:contain;display:block;}
 
   /* ---------- SECTIONS ---------- */
   section{padding:84px 0;}
@@ -255,7 +260,7 @@
 
 <header class="site">
   <div class="nav">
-    <div class="brand"><img src="iitb-logo.png" alt="IIT Bombay logo">SWOT INDIA 2026</div>
+    <div class="brand"><img src="iitb-logo.png" alt="IIT Bombay logo">SWOT Workshop India</div>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
     <nav class="links" id="navLinks">
       <a href="#introduction">Introduction</a>
@@ -299,9 +304,9 @@
 <div class="support-strip">
   <div class="wrap">
     <div class="logos">
-      <img src="iitb-logo.png" alt="IIT Bombay logo">
-      <img src="dept-logo.jpg" alt="Department logo">
-      <img src="partner-logo.png" alt="Partner project logo">
+      <div class="logo-box"><img src="iitb-logo.png" alt="IIT Bombay logo"></div>
+      <div class="logo-box"><img src="dept-logo.jpg" alt="Department logo"></div>
+      <div class="logo-box"><img src="partner-logo.png" alt="Partner project logo"></div>
     </div>
   </div>
 </div>
