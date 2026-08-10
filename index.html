@@ -3,24 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SWOT for India 2026 — Short Term Course, IIT Bombay</title>
-<meta name="description" content="Short Term Course on Surface Water and Ocean Topography (SWOT) for India. 7–9 September 2026, IIT Bombay.">
+<title>SWOT for India 2026: Short Term Course, IIT Bombay</title>
+<meta name="description" content="Short Term Course on Surface Water and Ocean Topography (SWOT) for India. 7 to 9 September 2026, IIT Bombay.">
+<link rel="icon" type="image/png" href="iitb-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0A1929;
-    --ink-soft:#122a42;
-    --paper:#F6F7F3;
-    --paper-dim:#EEF0EA;
-    --teal:#1C8C82;
-    --teal-light:#2DD4BF;
-    --amber:#D4A24C;
-    --slate:#20293A;
-    --slate-soft:#5C6B7A;
-    --line:#DCE1DB;
-    --radius:2px;
+    --ink:#081C3A;
+    --ink-soft:#0F2A54;
+    --paper:#FBFAF6;
+    --paper-dim:#F1EEE3;
+    --gold:#D99B1F;
+    --gold-light:#F4C24C;
+    --coral:#E8563D;
+    --slate:#141B2B;
+    --slate-soft:#57616F;
+    --line:#E4E1D6;
+    --radius:3px;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
@@ -28,55 +29,56 @@
     background:var(--paper);
     color:var(--slate);
     font-family:'Inter',sans-serif;
-    line-height:1.6;
+    line-height:1.65;
     -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3{
     font-family:'Space Grotesk',sans-serif;
     color:var(--ink);
-    font-weight:600;
-    line-height:1.15;
+    font-weight:800;
+    line-height:1.1;
+    letter-spacing:-0.01em;
   }
   .mono{font-family:'IBM Plex Mono',monospace;}
   a{color:inherit;}
   img{max-width:100%;display:block;}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
-  :focus-visible{outline:2px solid var(--teal);outline-offset:3px;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px;}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
 
   /* ---------- NAV ---------- */
   header.site{
     position:sticky;top:0;z-index:50;
-    background:rgba(246,247,243,0.92);
+    background:rgba(251,250,246,0.94);
     backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line);
+    border-bottom:2px solid var(--ink);
   }
   .nav{
     display:flex;align-items:center;justify-content:space-between;
-    padding:16px 28px;max-width:1120px;margin:0 auto;
+    padding:14px 28px;max-width:1160px;margin:0 auto;
   }
   .brand{
-    font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;
-    color:var(--ink);letter-spacing:0.01em;display:flex;align-items:center;gap:8px;
+    font-family:'Space Grotesk',sans-serif;font-weight:800;font-size:1.2rem;
+    color:var(--ink);letter-spacing:0.005em;display:flex;align-items:center;gap:12px;
   }
-  .brand .dot{width:8px;height:8px;background:var(--teal);border-radius:50%;display:inline-block;}
-  nav.links{display:flex;gap:26px;flex-wrap:wrap;}
+  .brand img{height:38px;width:auto;}
+  nav.links{display:flex;gap:28px;flex-wrap:wrap;}
   nav.links a{
-    font-size:0.86rem;text-decoration:none;color:var(--slate-soft);
-    font-weight:500;transition:color .15s;
+    font-size:0.92rem;text-decoration:none;color:var(--slate-soft);
+    font-weight:700;transition:color .15s;
   }
-  nav.links a:hover{color:var(--teal);}
+  nav.links a:hover{color:var(--gold);}
   .nav-toggle{display:none;}
 
   @media (max-width:820px){
     nav.links{
-      position:fixed;inset:64px 0 0 0;background:var(--paper);
-      flex-direction:column;padding:24px 28px;gap:18px;
+      position:fixed;inset:66px 0 0 0;background:var(--paper);
+      flex-direction:column;padding:24px 28px;gap:20px;
       transform:translateY(-110%);transition:transform .25s ease;
       border-bottom:1px solid var(--line);
     }
     nav.links.open{transform:translateY(0);}
     .nav-toggle{
-      display:block;background:none;border:none;font-size:1.4rem;color:var(--ink);cursor:pointer;
+      display:block;background:none;border:none;font-size:1.5rem;color:var(--ink);cursor:pointer;
     }
   }
 
@@ -86,153 +88,179 @@
     background:var(--ink);
     color:var(--paper);
     overflow:hidden;
-    padding:96px 0 80px;
+    padding:76px 0 68px;
   }
   .hero .wrap{position:relative;z-index:2;}
-  .swath-svg{position:absolute;inset:0;width:100%;height:100%;z-index:1;opacity:0.55;}
+  .hero-grid{display:grid;grid-template-columns:1.2fr 0.9fr;gap:48px;align-items:center;}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+  .swath-svg{position:absolute;inset:0;width:100%;height:100%;z-index:1;opacity:0.35;}
   .eyebrow{
     font-family:'IBM Plex Mono',monospace;
-    font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;
-    color:var(--teal-light);margin-bottom:18px;display:flex;align-items:center;gap:10px;
+    font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--gold-light);margin-bottom:20px;display:flex;align-items:center;gap:10px;
+    font-weight:600;
   }
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--teal-light);display:inline-block;}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--gold-light);display:inline-block;}
   .hero h1{
-    color:#fff;font-size:clamp(2.1rem,4.6vw,3.6rem);max-width:760px;margin-bottom:20px;
+    color:#fff;font-size:clamp(2.6rem,5.4vw,4.3rem);margin-bottom:22px;font-weight:800;
   }
-  .hero h1 em{font-style:normal;color:var(--teal-light);}
+  .hero h1 .accent{color:var(--gold-light);}
   .hero p.lede{
-    max-width:560px;color:#C9D3D9;font-size:1.05rem;margin-bottom:34px;
+    max-width:560px;color:#D3DAE3;font-size:1.12rem;margin-bottom:34px;font-weight:400;
   }
-  .meta-row{display:flex;flex-wrap:wrap;gap:28px;margin-bottom:38px;}
-  .meta-item{font-family:'IBM Plex Mono',monospace;font-size:0.84rem;color:#AEC3C7;}
-  .meta-item b{display:block;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;margin-top:2px;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:30px;margin-bottom:38px;}
+  .meta-item{font-family:'IBM Plex Mono',monospace;font-size:0.86rem;color:#9FB0C4;font-weight:500;}
+  .meta-item b{display:block;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:1.15rem;font-weight:700;margin-top:3px;}
   .btn-row{display:flex;gap:14px;flex-wrap:wrap;}
   .btn{
     display:inline-flex;align-items:center;gap:8px;
-    padding:13px 24px;font-weight:600;font-size:0.92rem;
+    padding:15px 28px;font-weight:700;font-size:0.96rem;
     text-decoration:none;border-radius:var(--radius);transition:all .15s;
-    border:1px solid transparent;
+    border:2px solid transparent;
   }
-  .btn-primary{background:var(--teal-light);color:var(--ink);}
-  .btn-primary:hover{background:#4fe0d1;}
-  .btn-ghost{border-color:rgba(255,255,255,0.3);color:#fff;}
-  .btn-ghost:hover{border-color:#fff;}
+  .btn-primary{background:var(--gold-light);color:var(--ink);}
+  .btn-primary:hover{background:#fff;}
+  .btn-ghost{border-color:rgba(255,255,255,0.4);color:#fff;}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
+
+  .hero-visual{
+    position:relative;border-radius:8px;overflow:hidden;
+    border:2px solid rgba(255,255,255,0.18);
+    background:var(--ink-soft);
+  }
+  .hero-visual img{width:100%;height:auto;display:block;}
+  .hero-visual .cap{
+    padding:14px 18px;font-family:'IBM Plex Mono',monospace;font-size:0.76rem;
+    color:#9FB0C4;border-top:1px solid rgba(255,255,255,0.14);
+  }
+
+  /* ---------- SUPPORTED BY STRIP ---------- */
+  .support-strip{
+    background:var(--paper-dim);border-bottom:1px solid var(--line);padding:26px 0;
+  }
+  .support-strip .wrap{display:flex;align-items:center;gap:36px;flex-wrap:wrap;}
+  .support-strip .label{
+    font-family:'IBM Plex Mono',monospace;font-size:0.76rem;letter-spacing:0.1em;
+    text-transform:uppercase;color:var(--slate-soft);font-weight:600;
+  }
+  .support-strip .logos{display:flex;align-items:center;gap:32px;flex-wrap:wrap;}
+  .support-strip img{height:44px;width:auto;filter:grayscale(0.15);}
 
   /* ---------- SECTIONS ---------- */
-  section{padding:76px 0;}
+  section{padding:84px 0;}
   section.alt{background:var(--paper-dim);}
-  .section-head{margin-bottom:42px;max-width:640px;}
+  .section-head{margin-bottom:46px;max-width:660px;}
   .section-head .tag{
-    font-family:'IBM Plex Mono',monospace;font-size:0.76rem;letter-spacing:0.12em;
-    text-transform:uppercase;color:var(--teal);margin-bottom:10px;display:block;
+    font-family:'IBM Plex Mono',monospace;font-size:0.8rem;letter-spacing:0.12em;
+    text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block;font-weight:700;
   }
-  .section-head h2{font-size:clamp(1.5rem,2.6vw,2.1rem);}
-  .section-head p{color:var(--slate-soft);margin-top:12px;font-size:1rem;}
+  .section-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:800;}
+  .section-head p{color:var(--slate-soft);margin-top:14px;font-size:1.05rem;}
 
   /* intro / two-col */
   .intro-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:start;}
   @media (max-width:860px){.intro-grid{grid-template-columns:1fr;}}
-  .obj-list{list-style:none;margin-top:20px;}
+  .obj-list{list-style:none;margin-top:22px;}
   .obj-list li{
-    display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line);
-    font-size:0.95rem;
+    display:flex;gap:16px;padding:16px 0;border-top:2px solid var(--line);
+    font-size:1rem;
   }
-  .obj-list li:last-child{border-bottom:1px solid var(--line);}
+  .obj-list li:last-child{border-bottom:2px solid var(--line);}
   .obj-list .n{
-    font-family:'IBM Plex Mono',monospace;color:var(--teal);font-size:0.85rem;flex-shrink:0;
-    padding-top:1px;
+    font-family:'IBM Plex Mono',monospace;color:var(--gold);font-size:0.9rem;flex-shrink:0;
+    padding-top:1px;font-weight:700;
   }
   .side-card{
-    background:var(--ink);color:var(--paper);padding:30px;border-radius:var(--radius);
+    background:var(--ink);color:var(--paper);padding:34px;border-radius:var(--radius);
   }
-  .side-card h3{color:#fff;font-size:1.05rem;margin-bottom:14px;}
-  .side-card p{color:#B9C7CB;font-size:0.92rem;margin-bottom:18px;}
+  .side-card h3{color:#fff;font-size:1.25rem;margin-bottom:16px;font-weight:800;}
+  .side-card p{color:#C3CBD6;font-size:0.96rem;margin-bottom:20px;}
   .side-card .fact{
     display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;
-    font-size:0.82rem;padding:9px 0;border-top:1px solid rgba(255,255,255,0.14);color:#AEC3C7;
+    font-size:0.86rem;padding:11px 0;border-top:1px solid rgba(255,255,255,0.16);color:#9FB0C4;
   }
-  .side-card .fact b{color:#fff;font-weight:500;}
+  .side-card .fact b{color:#fff;font-weight:600;}
 
   /* speakers */
   .speaker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   @media (max-width:860px){.speaker-grid{grid-template-columns:1fr;}}
   .speaker-card{
-    background:#fff;border:1px solid var(--line);padding:28px 24px;border-radius:var(--radius);
+    background:#fff;border:2px solid var(--line);padding:30px 26px;border-radius:var(--radius);
   }
   .speaker-avatar{
-    width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--ink));
+    width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--ink));
     display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Space Grotesk',sans-serif;
-    font-weight:600;font-size:1.1rem;margin-bottom:18px;
+    font-weight:800;font-size:1.2rem;margin-bottom:20px;
   }
-  .speaker-card h3{font-size:1.08rem;margin-bottom:4px;}
-  .speaker-card .role{color:var(--teal);font-size:0.86rem;font-weight:500;margin-bottom:2px;}
-  .speaker-card .org{color:var(--slate-soft);font-size:0.86rem;}
+  .speaker-card h3{font-size:1.18rem;margin-bottom:5px;font-weight:800;}
+  .speaker-card .role{color:var(--gold);font-size:0.9rem;font-weight:700;margin-bottom:3px;}
+  .speaker-card .org{color:var(--slate-soft);font-size:0.9rem;}
 
   /* coming soon cards */
   .cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   @media (max-width:860px){.cs-grid{grid-template-columns:1fr;}}
-  @media (max-width:560px){.cs-grid{grid-template-columns:1fr;}}
   .cs-card{
-    border:1px dashed var(--line);background:#fff;
-    padding:34px 22px;border-radius:var(--radius);text-align:left;
+    border:2px dashed var(--line);background:#fff;
+    padding:36px 24px;border-radius:var(--radius);text-align:left;
     position:relative;
   }
   .cs-card .icon{
-    width:34px;height:34px;border:1px solid var(--line);border-radius:50%;
-    display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--teal-light);
-    background:var(--ink);
+    width:38px;height:38px;border:2px solid var(--ink);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--gold-light);
+    background:var(--ink);font-weight:700;
   }
-  .cs-card h3{font-size:1rem;margin-bottom:6px;}
+  .cs-card h3{font-size:1.05rem;margin-bottom:8px;font-weight:800;}
   .cs-card .status{
-    font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.08em;
-    text-transform:uppercase;color:var(--amber);
+    font-family:'IBM Plex Mono',monospace;font-size:0.74rem;letter-spacing:0.08em;
+    text-transform:uppercase;color:var(--coral);font-weight:700;
   }
-  .cs-card p{color:var(--slate-soft);font-size:0.88rem;margin-top:8px;}
+  .cs-card p{color:var(--slate-soft);font-size:0.9rem;margin-top:10px;}
 
   /* venue */
   .venue-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
   @media (max-width:860px){.venue-grid{grid-template-columns:1fr;}}
-  .venue-card{background:#fff;border:1px solid var(--line);padding:30px;border-radius:var(--radius);}
-  .venue-card h3{font-size:1.02rem;margin-bottom:10px;}
-  .venue-card address{font-style:normal;color:var(--slate-soft);font-size:0.94rem;line-height:1.7;}
+  .venue-card{background:#fff;border:2px solid var(--line);padding:32px;border-radius:var(--radius);}
+  .venue-card h3{font-size:1.1rem;margin-bottom:12px;font-weight:800;}
+  .venue-card address{font-style:normal;color:var(--slate-soft);font-size:0.98rem;line-height:1.75;}
 
   /* contact / register */
   .contact-band{background:var(--ink);color:var(--paper);}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
   @media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
   .contact-band h2{color:#fff;}
-  .contact-band .section-head .tag{color:var(--teal-light);}
-  .contact-band p{color:#B9C7CB;}
-  .contact-list{margin-top:22px;}
+  .contact-band .section-head .tag{color:var(--gold-light);}
+  .contact-band p{color:#C3CBD6;}
+  .contact-list{margin-top:24px;}
   .contact-list .row{
-    display:flex;gap:14px;padding:13px 0;border-top:1px solid rgba(255,255,255,0.14);
-    font-size:0.92rem;color:#DDE6E8;
+    display:flex;gap:14px;padding:14px 0;border-top:1px solid rgba(255,255,255,0.16);
+    font-size:0.96rem;color:#E4E9EE;
   }
-  .contact-list .row .k{color:#7FA3A6;font-family:'IBM Plex Mono',monospace;font-size:0.78rem;width:88px;flex-shrink:0;padding-top:2px;}
-  .register-box{background:var(--ink-soft);border:1px solid rgba(255,255,255,0.14);padding:30px;border-radius:var(--radius);}
-  .register-box .deadline{font-family:'IBM Plex Mono',monospace;color:var(--amber);font-size:0.86rem;margin-bottom:18px;}
-  .register-box p{margin-bottom:22px;}
+  .contact-list .row .k{color:#8FA3B8;font-family:'IBM Plex Mono',monospace;font-size:0.8rem;width:96px;flex-shrink:0;padding-top:2px;font-weight:600;}
+  .register-box{background:var(--ink-soft);border:2px solid rgba(255,255,255,0.16);padding:32px;border-radius:var(--radius);}
+  .register-box h3{color:#fff;font-size:1.2rem;margin-bottom:12px;font-weight:800;}
+  .register-box .deadline{font-family:'IBM Plex Mono',monospace;color:var(--gold-light);font-size:0.9rem;margin-bottom:20px;font-weight:600;}
+  .register-box p{margin-bottom:24px;}
 
   /* footer */
-  footer{padding:36px 0;border-top:1px solid var(--line);}
-  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;}
-  footer p{font-size:0.82rem;color:var(--slate-soft);}
-  footer .support{font-size:0.78rem;color:var(--slate-soft);max-width:600px;}
+  footer{padding:40px 0;border-top:2px solid var(--ink);}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center;}
+  footer p{font-size:0.86rem;color:var(--slate-soft);}
+  footer .support{font-size:0.8rem;color:var(--slate-soft);max-width:600px;}
 
-  ::selection{background:var(--teal-light);color:var(--ink);}
+  ::selection{background:var(--gold-light);color:var(--ink);}
 </style>
 </head>
 <body>
 
 <header class="site">
   <div class="nav">
-    <div class="brand"><span class="dot"></span>SWOT&nbsp;INDIA&nbsp;2026</div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <div class="brand"><img src="iitb-logo.png" alt="IIT Bombay logo">SWOT INDIA 2026</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
     <nav class="links" id="navLinks">
       <a href="#introduction">Introduction</a>
       <a href="#schedule">Schedule</a>
       <a href="#speakers">Speakers</a>
-      <a href="#venue">Venue &amp; Hotels</a>
+      <a href="#venue">Venue and Hotels</a>
       <a href="#gallery">Gallery</a>
       <a href="#team">Team</a>
       <a href="#contact">Contact</a>
@@ -242,52 +270,69 @@
 
 <section class="hero">
   <svg class="swath-svg" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <!-- twin-swath ground track motif, evoking SWOT's dual 50km swaths either side of the nadir gap -->
-    <g stroke="#2DD4BF" stroke-width="1" fill="none">
-      <path d="M -50 40 Q 400 220 260 640" opacity="0.28"/>
-      <path d="M 10 20 Q 460 210 320 640" opacity="0.22"/>
-      <path d="M 70 0 Q 520 200 380 640" opacity="0.16"/>
-      <path d="M 1250 40 Q 800 220 940 640" opacity="0.28"/>
-      <path d="M 1190 20 Q 740 210 880 640" opacity="0.22"/>
-      <path d="M 1130 0 Q 680 200 820 640" opacity="0.16"/>
+    <g stroke="#F4C24C" stroke-width="1" fill="none">
+      <path d="M -50 40 Q 400 220 260 640" opacity="0.22"/>
+      <path d="M 10 20 Q 460 210 320 640" opacity="0.16"/>
+      <path d="M 70 0 Q 520 200 380 640" opacity="0.12"/>
+      <path d="M 1250 40 Q 800 220 940 640" opacity="0.22"/>
+      <path d="M 1190 20 Q 740 210 880 640" opacity="0.16"/>
+      <path d="M 1130 0 Q 680 200 820 640" opacity="0.12"/>
     </g>
-    <line x1="600" y1="0" x2="600" y2="640" stroke="#D4A24C" stroke-width="1" stroke-dasharray="2 6" opacity="0.35"/>
   </svg>
   <div class="wrap">
-    <div class="eyebrow">Short Term Course · IIT Bombay</div>
-    <h1>Surface Water &amp; Ocean<br>Topography <em>— for India</em></h1>
-    <p class="lede">A short course bringing together researchers and students working on the SWOT mission — hydrology products, quality control, discharge algorithms, and hands-on data handling — with an open track toward new collaborations over Indian river and lake basins.</p>
-    <div class="meta-row">
-      <div class="meta-item">DATES<b>7–9 September 2026</b></div>
-      <div class="meta-item">VENUE<b>IIT Bombay, Powai</b></div>
-      <div class="meta-item">DEADLINE<b>15 August 2026</b></div>
-    </div>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="https://forms.gle/T1g8yVvjcrAVeuf38" target="_blank" rel="noopener">Register now</a>
-      <a class="btn btn-ghost" href="#introduction">Learn more</a>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Short Term Course · IIT Bombay</div>
+        <h1>Surface Water &amp; Ocean Topography <span class="accent">for India</span></h1>
+        <p class="lede">A short course bringing together researchers and students working on the SWOT mission. Topics include hydrology products, quality control, discharge algorithms, and practical data handling, with an open track toward new collaborations over Indian river and lake basins.</p>
+        <div class="meta-row">
+          <div class="meta-item">DATES<b>7 to 9 September 2026</b></div>
+          <div class="meta-item">VENUE<b>IIT Bombay, Powai</b></div>
+          <div class="meta-item">DEADLINE<b>15 August 2026</b></div>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://forms.gle/T1g8yVvjcrAVeuf38" target="_blank" rel="noopener">Register Now</a>
+          <a class="btn btn-ghost" href="#introduction">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="swot-satellite.png" alt="SWOT satellite illustration over Earth">
+        <div class="cap">SWOT · Surface Water and Ocean Topography Mission</div>
+      </div>
     </div>
   </div>
 </section>
+
+<div class="support-strip">
+  <div class="wrap">
+    <span class="label">In Association With</span>
+    <div class="logos">
+      <img src="iitb-logo.png" alt="IIT Bombay logo">
+      <img src="dept-logo.jpg" alt="Department logo">
+      <img src="partner-logo.png" alt="Partner project logo">
+    </div>
+  </div>
+</div>
 
 <section id="introduction">
   <div class="wrap intro-grid">
     <div>
       <div class="section-head">
         <span class="tag">Introduction</span>
-        <h2>Why this course</h2>
-        <p>This program brings together researchers and students working on the Surface Water and Ocean Topography (SWOT) mission, launched in December 2022, with a focus on SWOT-related studies over Indian basins and new collaborations in river and lake science.</p>
+        <h2>Why This Course</h2>
+        <p>This program brings together researchers and students working on the Surface Water and Ocean Topography (SWOT) mission, launched in December 2022, with a focus on SWOT related studies over Indian basins and new collaborations in river and lake science.</p>
       </div>
       <ul class="obj-list">
-        <li><span class="n">01</span><span>Overview of SWOT hydrology products, quality-control procedures, and recommendations for users.</span></li>
-        <li><span class="n">02</span><span>Recent scientific advances from the SWOT Science Team across hydrology-related topics.</span></li>
-        <li><span class="n">03</span><span>New synergies and collaborations for SWOT-based research over India.</span></li>
+        <li><span class="n">01</span><span>Overview of SWOT hydrology products, quality control procedures, and recommendations for users.</span></li>
+        <li><span class="n">02</span><span>Recent scientific advances from the SWOT Science Team across hydrology related topics.</span></li>
+        <li><span class="n">03</span><span>New synergies and collaborations for SWOT based research over India.</span></li>
       </ul>
     </div>
     <div class="side-card">
-      <h3>Course outline</h3>
-      <p>Fundamentals of SWOT hydrology products, quality control steps, and an overview of SWOT discharge algorithms — with demonstrations and hands-on sessions in data handling, plus state-of-the-art applications in hydrological modelling.</p>
-      <div class="fact"><span>Format</span><b>Lectures + hands-on</b></div>
-      <div class="fact"><span>Audience</span><b>Researchers &amp; students</b></div>
+      <h3>Course Outline</h3>
+      <p>Fundamentals of SWOT hydrology products, quality control steps, and an overview of SWOT discharge algorithms. Includes demonstrations and practical sessions in data handling, plus the latest applications in hydrological modelling.</p>
+      <div class="fact"><span>Format</span><b>Lectures and practical sessions</b></div>
+      <div class="fact"><span>Audience</span><b>Researchers and students</b></div>
       <div class="fact"><span>Seats</span><b>Limited</b></div>
       <div class="fact"><span>Coordinator</span><b>Prof. J Indu</b></div>
     </div>
@@ -297,27 +342,27 @@
 <section class="alt" id="schedule">
   <div class="wrap">
     <div class="section-head">
-      <span class="tag">Schedule &amp; Agenda</span>
-      <h2>7–9 September 2026</h2>
-      <p>The detailed day-by-day schedule and session agenda will be published here as the program is finalised.</p>
+      <span class="tag">Schedule and Agenda</span>
+      <h2>7 to 9 September 2026</h2>
+      <p>The detailed daily schedule and session agenda will be published here as the program is finalised.</p>
     </div>
     <div class="cs-grid">
       <div class="cs-card">
         <div class="icon">1</div>
         <h3>Day 1 · Foundations</h3>
-        <span class="status">Coming soon</span>
+        <span class="status">Coming Soon</span>
         <p>SWOT hydrology products and quality control.</p>
       </div>
       <div class="cs-card">
         <div class="icon">2</div>
-        <h3>Day 2 · Deep dive</h3>
-        <span class="status">Coming soon</span>
-        <p>Discharge algorithms and hands-on data handling.</p>
+        <h3>Day 2 · Deep Dive</h3>
+        <span class="status">Coming Soon</span>
+        <p>Discharge algorithms and practical data handling.</p>
       </div>
       <div class="cs-card">
         <div class="icon">3</div>
         <h3>Day 3 · Applications</h3>
-        <span class="status">Coming soon</span>
+        <span class="status">Coming Soon</span>
         <p>Hydrological modelling and collaboration sessions.</p>
       </div>
     </div>
@@ -336,7 +381,7 @@
         <div class="speaker-avatar">HO</div>
         <h3>Dr. Hind Oubanas</h3>
         <div class="role">SWOT Hydrology Science Lead</div>
-        <div class="org">INRAE-GEAU, France</div>
+        <div class="org">INRAE GEAU, France</div>
       </div>
       <div class="speaker-card">
         <div class="speaker-avatar">CE</div>
@@ -357,18 +402,18 @@
 <section class="alt" id="venue">
   <div class="wrap">
     <div class="section-head">
-      <span class="tag">Venue &amp; Hotels Nearby</span>
-      <h2>Where to be, where to stay</h2>
+      <span class="tag">Venue and Hotels Nearby</span>
+      <h2>Where to Be, Where to Stay</h2>
     </div>
     <div class="venue-grid">
       <div class="venue-card">
         <h3>Venue</h3>
-        <address>Department of Civil Engineering<br>Indian Institute of Technology Bombay<br>Powai, Mumbai – 400076</address>
+        <address>Department of Civil Engineering<br>Indian Institute of Technology Bombay<br>Powai, Mumbai 400076</address>
       </div>
       <div class="cs-card">
-        <div class="icon">🏨</div>
-        <h3>Hotels nearby</h3>
-        <span class="status">Coming soon</span>
+        <div class="icon">&#127976;</div>
+        <h3>Hotels Nearby</h3>
+        <span class="status">Coming Soon</span>
         <p>A shortlist of hotels and guesthouses near IIT Bombay will be added here.</p>
       </div>
     </div>
@@ -379,12 +424,12 @@
   <div class="wrap">
     <div class="section-head">
       <span class="tag">Gallery</span>
-      <h2>Moments from the course</h2>
+      <h2>Moments From the Course</h2>
     </div>
     <div class="cs-grid">
-      <div class="cs-card"><div class="icon">◧</div><h3>Sessions</h3><span class="status">Coming soon</span></div>
-      <div class="cs-card"><div class="icon">◧</div><h3>Hands-on labs</h3><span class="status">Coming soon</span></div>
-      <div class="cs-card"><div class="icon">◧</div><h3>Campus &amp; excursions</h3><span class="status">Coming soon</span></div>
+      <div class="cs-card"><div class="icon">&#9635;</div><h3>Sessions</h3><span class="status">Coming Soon</span></div>
+      <div class="cs-card"><div class="icon">&#9635;</div><h3>Practical Labs</h3><span class="status">Coming Soon</span></div>
+      <div class="cs-card"><div class="icon">&#9635;</div><h3>Campus and Excursions</h3><span class="status">Coming Soon</span></div>
     </div>
   </div>
 </section>
@@ -393,12 +438,12 @@
   <div class="wrap">
     <div class="section-head">
       <span class="tag">Team</span>
-      <h2>Organising team</h2>
+      <h2>Organising Team</h2>
     </div>
     <div class="cs-grid">
-      <div class="cs-card"><div class="icon">👤</div><h3>Organising committee</h3><span class="status">Coming soon</span></div>
-      <div class="cs-card"><div class="icon">👤</div><h3>Student volunteers</h3><span class="status">Coming soon</span></div>
-      <div class="cs-card"><div class="icon">👤</div><h3>Technical support</h3><span class="status">Coming soon</span></div>
+      <div class="cs-card"><div class="icon">&#128100;</div><h3>Organising Committee</h3><span class="status">Coming Soon</span></div>
+      <div class="cs-card"><div class="icon">&#128100;</div><h3>Student Volunteers</h3><span class="status">Coming Soon</span></div>
+      <div class="cs-card"><div class="icon">&#128100;</div><h3>Technical Support</h3><span class="status">Coming Soon</span></div>
     </div>
   </div>
 </section>
@@ -408,28 +453,28 @@
     <div>
       <div class="section-head">
         <span class="tag">Contact</span>
-        <h2>Get in touch</h2>
+        <h2>Get in Touch</h2>
         <p>For questions about the course, reach the coordinator directly.</p>
       </div>
       <div class="contact-list">
         <div class="row"><span class="k">Coordinator</span><span>Prof. J Indu</span></div>
         <div class="row"><span class="k">Email</span><span>indusj@civil.iitb.ac.in</span></div>
-        <div class="row"><span class="k">Phone</span><span>+91-22-2576 1446</span></div>
-        <div class="row"><span class="k">Address</span><span>Department of Civil Engineering, IIT Bombay, Powai, Mumbai – 400076</span></div>
+        <div class="row"><span class="k">Phone</span><span>+91 22 2576 1446</span></div>
+        <div class="row"><span class="k">Address</span><span>Department of Civil Engineering, IIT Bombay, Powai, Mumbai 400076</span></div>
       </div>
     </div>
     <div class="register-box">
-      <h3 style="color:#fff;margin-bottom:10px;">Registration</h3>
-      <div class="deadline">Deadline · 15 August 2026 — limited seats</div>
+      <h3>Registration</h3>
+      <div class="deadline">Deadline: 15 August 2026, limited seats</div>
       <p>Register via Google Form. A QR code is also available on the course flyer.</p>
-      <a class="btn btn-primary" href="https://forms.gle/T1g8yVvjcrAVeuf38" target="_blank" rel="noopener">Go to registration form</a>
+      <a class="btn btn-primary" href="https://forms.gle/T1g8yVvjcrAVeuf38" target="_blank" rel="noopener">Go to Registration Form</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <p>© 2026 SWOT for India — Department of Civil Engineering, IIT Bombay.</p>
+    <p>&copy; 2026 SWOT for India. Department of Civil Engineering, IIT Bombay.</p>
     <p class="support">Supported by CEFIPRA CSRP project W-7000-1, GISE project, Department of Civil Engineering, IIT Bombay.</p>
   </div>
 </footer>
