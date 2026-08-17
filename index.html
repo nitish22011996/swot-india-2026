@@ -217,7 +217,14 @@
   .venue-card{background:#fff;border:2px solid var(--line);padding:32px;border-radius:var(--radius);}
   .venue-card h3{font-size:1.1rem;margin-bottom:12px;font-weight:800;}
   .venue-card address{font-style:normal;color:var(--slate-soft);font-size:0.98rem;line-height:1.75;}
-
+  .hotel-city{font-size:1rem;font-weight:800;margin-bottom:16px;color:var(--ink);}
+  .hotel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media (max-width:860px){.hotel-grid{grid-template-columns:1fr;}}
+  .hotel-card{background:#fff;border:2px solid var(--line);padding:24px;border-radius:var(--radius);}
+  .hotel-card h4{font-family:'Space Grotesk',sans-serif;font-size:1.02rem;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .hotel-card .loc{color:var(--slate-soft);font-size:0.86rem;margin-bottom:14px;}
+  .hotel-link{display:inline-block;font-size:0.86rem;font-weight:700;color:var(--gold);text-decoration:none;}
+  .hotel-link:hover{text-decoration:underline;}
   /* contact / register */
   .contact-band{background:var(--ink);color:var(--paper);}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
@@ -391,18 +398,36 @@
       <span class="tag">Venue and Hotels Nearby</span>
       <h2>Where to Be, Where to Stay</h2>
     </div>
-    <div class="venue-grid">
-      <div class="venue-card">
-        <h3>Venue</h3>
-        <address>Department of Civil Engineering<br>Indian Institute of Technology Bombay<br>Powai, Mumbai 400076</address>
-      </div>
-      <div class="cs-card">
-        <div class="icon">&#127976;</div>
-        <h3>Hotels Nearby</h3>
-        <span class="status">Coming Soon</span>
-        <p>A shortlist of hotels and guesthouses near IIT Bombay will be added here.</p>
-      </div>
-    </div>
+   <div class="venue-card" style="margin-bottom:36px;">
+  <h3>Venue</h3>
+  <address>Department of Civil Engineering<br>Indian Institute of Technology Bombay<br>Powai, Mumbai 400076</address>
+</div>
+
+<h3 class="hotel-city">Hotels in Mumbai</h3>
+<div class="hotel-grid">
+  <div class="hotel-card">
+    <h4>Lake Bloom Residency</h4>
+    <div class="loc">Powai, Mumbai</div>
+    <a class="hotel-link" href="https://www.booking.com/hotel/in/lake-bloom-residency-mumbai.en-gb.html" target="_blank" rel="noopener">View and Book &rarr;</a>
+  </div>
+  <div class="hotel-card">
+    <h4>FabHotel Elvis International</h4>
+    <div class="loc">Mumbai</div>
+    <a class="hotel-link" href="https://www.booking.com/hotel/in/rama-plaza.en-gb.html" target="_blank" rel="noopener">View and Book &rarr;</a>
+  </div>
+  <div class="hotel-card">
+    <h4>Itsy Hotel Rexton Inn</h4>
+    <div class="loc">Mumbai</div>
+    <a class="hotel-link" href="https://www.booking.com/hotel/in/rexton.en-gb.html" target="_blank" rel="noopener">View and Book &rarr;</a>
+  </div>
+</div>
+
+<div class="cs-card" style="margin-top:24px;">
+  <div class="icon">&#127976;</div>
+  <h3>Hotels in Surat</h3>
+  <span class="status">Coming Soon</span>
+  <p>A shortlist of hotels in Surat will be added here.</p>
+</div>
   </div>
 </section>
 
