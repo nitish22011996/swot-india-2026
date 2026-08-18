@@ -225,6 +225,32 @@
   .hotel-card .loc{color:var(--slate-soft);font-size:0.86rem;margin-bottom:14px;}
   .hotel-link{display:inline-block;font-size:0.86rem;font-weight:700;color:var(--gold);text-decoration:none;}
   .hotel-link:hover{text-decoration:underline;}
+  .agenda{display:flex;flex-direction:column;gap:14px;}
+  .day-block{background:#fff;border:2px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+  .day-block summary{
+    cursor:pointer;list-style:none;padding:18px 22px;font-family:'Space Grotesk',sans-serif;font-weight:800;
+    font-size:1rem;color:var(--ink);display:flex;align-items:center;justify-content:space-between;background:var(--paper-dim);
+  }
+  .day-block summary::-webkit-details-marker{display:none;}
+  .day-block summary::after{content:"+";font-size:1.2rem;color:var(--gold);}
+  .day-block[open] summary::after{content:"\2013";}
+  .agenda-body{padding:18px 22px;}
+  .agenda-row{display:flex;flex-wrap:wrap;gap:6px 18px;padding:11px 0;border-top:1px solid var(--line);font-size:0.9rem;}
+  .agenda-row:first-child{border-top:none;}
+  .agenda-row .time{font-family:'IBM Plex Mono',monospace;color:var(--gold);font-size:0.78rem;flex-shrink:0;width:150px;font-weight:700;}
+  .agenda-row .what{color:var(--slate);flex:1;min-width:200px;}
+  .agenda-row .what em{color:var(--slate-soft);font-style:normal;display:block;font-size:0.83rem;margin-top:2px;}
+  .talk-list{list-style:none;margin:4px 0 16px 8px;padding-left:16px;border-left:2px solid var(--line);}
+  .talk-list li{padding:8px 0;}
+  .talk-list .t-title{color:var(--slate);font-weight:600;display:block;font-size:0.87rem;}
+  .talk-list .t-who{color:var(--slate-soft);font-size:0.8rem;}
+  .talk-list .t-time{font-family:'IBM Plex Mono',monospace;color:var(--gold);font-size:0.75rem;display:block;margin-bottom:2px;font-weight:700;}
+  .overview-wrap{margin-bottom:32px;overflow-x:auto;}
+  .overview-table{width:100%;border-collapse:collapse;margin-bottom:18px;min-width:600px;}
+  .overview-table caption{text-align:left;font-family:'Space Grotesk',sans-serif;font-weight:800;color:var(--ink);font-size:0.92rem;margin-bottom:8px;caption-side:top;}
+  .overview-table th{background:var(--ink);color:var(--gold-light);font-family:'IBM Plex Mono',monospace;font-size:0.68rem;padding:8px 10px;text-align:left;font-weight:600;border:1px solid var(--ink);}
+  .overview-table td{background:#fff;border:1px solid var(--line);padding:10px;font-size:0.78rem;color:var(--slate);vertical-align:top;}
+  .overview-note{font-size:0.85rem;color:var(--slate-soft);margin-top:4px;}
   /* contact / register */
   .contact-band{background:var(--ink);color:var(--paper);}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
@@ -334,6 +360,49 @@
       <h2>7 to 9 September 2026</h2>
       <p>Full day by day agenda. Tap a day to expand it.</p>
     </div>
+    <div class="overview-wrap">
+  <table class="overview-table">
+    <caption>Day 1, September 7</caption>
+    <thead><tr><th>9:30 to 11:00 AM</th><th>11:00 AM to 12:30 PM</th><th>12:30 to 2:00 PM</th><th>2:00 to 3:30 PM</th><th>3:30 to 4:00 PM</th><th>4:00 to 5:30 PM</th><th>6:30 PM</th></tr></thead>
+    <tbody><tr>
+      <td>Inauguration and mutual introductions, high tea and group photo</td>
+      <td>SWOT Mission Over Continental Waters, Dr. Hind Oubanas</td>
+      <td>Lunch</td>
+      <td>SWOT HR Products for Hydrology, Dr. Charlotte Emery</td>
+      <td>Tea Break</td>
+      <td>Hydroweb.next, Dr. Charlotte Emery</td>
+      <td>Networking and Gala Dinner</td>
+    </tr></tbody>
+  </table>
+
+  <table class="overview-table">
+    <caption>Day 2, September 8</caption>
+    <thead><tr><th>9:00 to 10:30 AM</th><th>10:30 to 11:00 AM</th><th>11:00 AM to 12:40 PM</th><th>12:45 to 2:30 PM</th><th>2:30 to 3:50 PM</th><th>3:50 to 4:00 PM</th><th>4:00 to 5:45 PM</th></tr></thead>
+    <tbody><tr>
+      <td>Session I, SWOT for Rivers</td>
+      <td>Tea Break</td>
+      <td>Session I continued, SWOT for Rivers</td>
+      <td>Lunch</td>
+      <td>Session II, SWOT for Oceans</td>
+      <td>Short Break</td>
+      <td>Session III, SWOT for Lakes</td>
+    </tr></tbody>
+  </table>
+
+  <table class="overview-table">
+    <caption>Day 3, September 9</caption>
+    <thead><tr><th>9:00 to 10:40 AM</th><th>10:40 to 11:00 AM</th><th>11:00 to 11:30 AM</th><th>11:30 AM to 12:00 PM</th><th>12:00 to 1:00 PM</th></tr></thead>
+    <tbody><tr>
+      <td>Session IV, Synergies Between Other Missions</td>
+      <td>Tea Break</td>
+      <td>Challenges and Opportunities</td>
+      <td>Future Collaborations and Working Group</td>
+      <td>Field Trip Details and Closing</td>
+    </tr></tbody>
+  </table>
+
+  <p class="overview-note">Day 4: departure from IIT Bombay for the field trip, with a halt in Surat. Day 5: field data collection. Day 6: check out and return to IIT Bombay.</p>
+</div>
     <div class="agenda">
 
       <details class="day-block" open>
@@ -483,11 +552,15 @@
   </div>
 </div>
 
-<div class="cs-card" style="margin-top:24px;">
-  <div class="icon">&#127976;</div>
-  <h3>Hotels in Surat</h3>
-  <span class="status">Coming Soon</span>
-  <p>A shortlist of hotels in Surat will be added here.</p>
+<h3 class="hotel-city" style="margin-top:36px;">Hotels in Surat</h3>
+<div class="hotel-grid">
+  <div class="hotel-card"><h4>Hotel El Magnifico</h4><div class="loc">Surat</div></div>
+  <div class="hotel-card"><h4>Hotel Orange International</h4><div class="loc">Surat</div></div>
+  <div class="hotel-card"><h4>Hotel Le Grand</h4><div class="loc">Surat</div></div>
+  <div class="hotel-card"><h4>Hotel Sifat International</h4><div class="loc">Surat</div></div>
+  <div class="hotel-card"><h4>Hotel Kohinoor Inn</h4><div class="loc">Surat</div></div>
+  <div class="hotel-card"><h4>Hotel Hunter</h4><div class="loc">Bardoli</div></div>
+  <div class="hotel-card"><h4>Hotel Nivya Rooms</h4><div class="loc">Mandvi</div></div>
 </div>
   </div>
 </section>
@@ -547,6 +620,7 @@
 <footer>
   <div class="wrap">
     <p>&copy; 2026 SWOT for India. Department of Civil Engineering, IIT Bombay.</p>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=swot-workshop-india-2026" alt="Visitor count" style="height:20px;">
     <p class="support">Supported by CEFIPRA CSRP project W-7000-1, GISE project, Department of Civil Engineering, IIT Bombay.</p>
   </div>
 </footer>
