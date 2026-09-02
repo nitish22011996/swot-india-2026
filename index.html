@@ -254,6 +254,12 @@
   .tide-row{display:flex;justify-content:space-between;padding:9px 0;border-top:1px solid var(--line);font-size:0.9rem;color:var(--slate);}
   .tide-row:first-of-type{border-top:none;}
   .tide-row .k{color:var(--slate-soft);font-family:'IBM Plex Mono',monospace;font-size:0.78rem;}
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media (max-width:860px){.team-grid{grid-template-columns:1fr;}}
+  .team-card{background:#fff;border:2px solid var(--line);padding:28px 22px;border-radius:var(--radius);text-align:center;}
+  .team-photo{width:76px;height:76px;border-radius:50%;object-fit:cover;margin:0 auto 16px;display:block;border:2px solid var(--line);}
+  .team-card h3{font-size:1.02rem;margin-bottom:4px;font-weight:800;}
+  .team-card .role{color:var(--gold);font-size:0.86rem;font-weight:700;}
   /* contact / register */
   .contact-band{background:var(--ink);color:var(--paper);}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
@@ -604,10 +610,37 @@
       <span class="tag">Team</span>
       <h2>Organising Team</h2>
     </div>
-    <div class="cs-grid">
-      <div class="cs-card"><div class="icon">&#128100;</div><h3>Organising Committee</h3><span class="status">Coming Soon</span></div>
-      <div class="cs-card"><div class="icon">&#128100;</div><h3>Student Volunteers</h3><span class="status">Coming Soon</span></div>
-      <div class="cs-card"><div class="icon">&#128100;</div><h3>Technical Support</h3><span class="status">Coming Soon</span></div>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="prof-indu.jpg" alt="Prof. J Indu" class="team-photo">
+        <h3>Prof. J Indu</h3>
+        <div class="role">Course Coordinator</div>
+      </div>
+      <div class="team-card">
+        <img src="prashant.jpg" alt="Prashant" class="team-photo">
+        <h3>Prashant</h3>
+        <div class="role">Travel and Accommodation</div>
+      </div>
+      <div class="team-card">
+        <img src="sahana-shirin.jpg" alt="Sahana Shirin A H" class="team-photo">
+        <h3>Sahana Shirin A H</h3>
+        <div class="role">Technical Team</div>
+      </div>
+      <div class="team-card">
+        <img src="nitish-kumar.jpg" alt="Nitish Kumar" class="team-photo">
+        <h3>Nitish Kumar</h3>
+        <div class="role">Technical Team</div>
+      </div>
+      <div class="team-card">
+        <img src="iqlas.jpg" alt="Iqlas" class="team-photo">
+        <h3>Iqlas</h3>
+        <div class="role">Field Coordinator</div>
+      </div>
+      <div class="team-card">
+        <img src="kavita-k.jpg" alt="Kavita K" class="team-photo">
+        <h3>Kavita K</h3>
+        <div class="role">Field Coordinator</div>
+      </div>
     </div>
   </div>
 </section>
