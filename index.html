@@ -260,6 +260,11 @@
   .team-photo{width:76px;height:76px;border-radius:50%;object-fit:cover;margin:0 auto 16px;display:block;border:2px solid var(--line);}
   .team-card h3{font-size:1.02rem;margin-bottom:4px;font-weight:800;}
   .team-card .role{color:var(--gold);font-size:0.86rem;font-weight:700;}
+  .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  @media (max-width:860px){.gallery-grid{grid-template-columns:1fr;}}
+  .gallery-item{background:#fff;border:2px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:0;}
+  .gallery-item img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;background:var(--paper-dim);min-height:320px;}
+  .gallery-item figcaption{padding:14px 16px;font-size:0.92rem;color:var(--slate-soft);font-weight:600;}
   /* contact / register */
   .contact-band{background:var(--ink);color:var(--paper);}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
@@ -373,8 +378,9 @@
     <div class="overview-wrap">
   <table class="overview-table">
     <caption>Day 1, September 7</caption>
-    <thead><tr><th>9:30 to 10:00 AM</th><th>10:00 to 11:00 AM</th><th>11:00 AM to 12:30 PM</th><th>12:30 to 2:00 PM</th><th>2:00 to 3:30 PM</th><th>3:30 to 4:00 PM</th><th>4:00 to 5:30 PM</th><th>6:30 PM</th></tr></thead>
+     <thead><tr><th>9:00 to 9:30 AM</th><th>9:30 to 10:00 AM</th><th>10:00 to 11:00 AM</th><th>11:00 AM to 12:30 PM</th><th>12:30 to 2:00 PM</th><th>2:00 to 3:30 PM</th><th>3:30 to 4:00 PM</th><th>4:00 to 5:30 PM</th><th>6:30 PM</th></tr></thead>
     <tbody><tr>
+      <td>Registration</td>
       <td>Inauguration by Dean (R&amp;D) and Head of Department (Civil)</td>
       <td>Mutual Introductions, Group Photograph, and High Tea</td>
       <td>SWOT Hydro, HR Products, and Ocean Overview, Dr. Hind Oubanas, Dr. Charlotte Emery, and Dr. Francesco</td>
@@ -420,6 +426,7 @@
       <details class="day-block" open>
         <summary>Day 1 &middot; September 7</summary>
         <div class="agenda-body">
+          <div class="agenda-row"><span class="time">9:00 to 9:30 AM</span><span class="what">Registration</span></div>
           <div class="agenda-row"><span class="time">9:30 to 10:00 AM</span><span class="what">Inauguration by Dean (R&amp;D) and Head of Department (Civil)</span></div>
           <div class="agenda-row"><span class="time">10:00 to 11:00 AM</span><span class="what">Mutual Introductions, Group Photograph, and High Tea</span></div>
           <div class="agenda-row"><span class="time">11:00 AM to 12:30 PM</span><span class="what">SWOT Overview Talks</span></div>
@@ -445,7 +452,7 @@
       <details class="day-block">
         <summary>Day 2 &middot; September 8</summary>
         <div class="agenda-body">
-          <div class="agenda-row"><span class="time">9:00 to 10:30 AM</span><span class="what">Session I, SWOT for Rivers</span></div>
+                    <div class="agenda-row"><span class="time">9:00 to 10:30 AM</span><span class="what">Session I, SWOT for Rivers<em>Moderators: Shahana Shirin A H and Kavita </em></span></div>
           <ul class="talk-list">
             <li><span class="t-time">9:00 AM</span><span class="t-title">Application of SWOT Mission for Mountainous Rivers</span><span class="t-who">Prof. Chembolu Vinay, IIT Jammu</span></li>
             <li><span class="t-time">9:20 AM</span><span class="t-title">SWOT for Flood Early Warning Systems, Cal and Val</span><span class="t-who">Mr. Girishchandra Yendargaye, Scientist D, CDAC</span></li>
@@ -453,7 +460,7 @@
             <li><span class="t-time">10:00 AM</span><span class="t-title">Development of a Geospatial Database for Flood Inundation Mapping Using SWOT Satellite Data</span><span class="t-who">Prof. Sreeparvathy Vijay, IIT Madras</span></li>
           </ul>
           <div class="agenda-row"><span class="time">10:30 to 11:00 AM</span><span class="what">Tea Break</span></div>
-          <div class="agenda-row"><span class="time">11:00 AM to 12:00 PM</span><span class="what">Session I continued, SWOT for Rivers</span></div>
+                    <div class="agenda-row"><span class="time">11:00 AM to 12:00 PM</span><span class="what">Session I continued, SWOT for Rivers<em>Moderators: Shahana Shirin A H and Kavita </em></span></div>
           <ul class="talk-list">
             <li><span class="t-time">11:00 AM</span><span class="t-title">Flood Risk and Resilience Mapping, Scientific Insights Across Spatial Scales</span><span class="t-who">Prof. Subhankar Karmakar, IIT Bombay</span></li>
             <li><span class="t-time">11:20 AM</span><span class="t-title">Advancing River and Lake Hydrodynamics Through SWOT and Multi Satellite Data Integration</span><span class="t-who">Mr. Pankaj Ramji Dhote, Scientist, IIRS, ISRO</span></li>
@@ -461,7 +468,7 @@
           </ul>
           <div class="agenda-row"><span class="time">12:00 to 12:40 PM</span><span class="what">Discussions for SWOT Working Group in India</span></div>
           <div class="agenda-row"><span class="time">12:40 to 2:00 PM</span><span class="what">Lunch</span></div>
-          <div class="agenda-row"><span class="time">2:00 to 3:20 PM</span><span class="what">Session II, SWOT for Oceans</span></div>
+                    <div class="agenda-row"><span class="time">2:00 to 3:20 PM</span><span class="what">Session II, SWOT for Oceans<em>Moderator: Kavita K</em></span></div>
           <ul class="talk-list">
             <li><span class="t-time">2:00 PM</span><span class="t-title">Validation of SWOT Observations Using In-situ Oceanographic Measurements in the Arabian Sea and Bay of Bengal</span><span class="t-who">Dr. Jossia Joseph K, NIOT</span></li>
             <li><span class="t-time">2:20 PM</span><span class="t-title">In Situ Measurements From Deep Ocean Moored Buoy Systems</span><span class="t-who">Mr. Kesavakumar B, Scientist, NIOT Chennai</span></li>
@@ -469,7 +476,7 @@
             <li><span class="t-time">3:00 PM</span><span class="t-title">In Situ Measurements From Deep Ocean Moored Buoy Systems</span><span class="t-who">Ms. Shyamala Varthini D, Scientist C, NIOT Chennai</span></li>
           </ul>
           <div class="agenda-row"><span class="time">3:20 to 3:40 PM</span><span class="what">Short Break</span></div>
-          <div class="agenda-row"><span class="time">3:40 to 4:40 PM</span><span class="what">Session III, SWOT for Lakes</span></div>
+          <div class="agenda-row"><span class="time">3:40 to 4:40 PM</span><span class="what">Session III, SWOT for Lakes<em>Moderators: Dr. Nitish Kumar and Kavita K</em></span></div>
           <ul class="talk-list">
             <li><span class="t-time">3:40 PM</span><span class="t-title">Integrating SWOT Altimetry With the Operational WBIS for Monitoring Waterbodies</span><span class="t-who">Mr. C. Sarat Chandra, Scientist, NRSC, ISRO</span></li>
             <li><span class="t-time">4:00 PM</span><span class="t-title">Application of SWOT Data for Wetland Water Surface Elevation Estimation</span><span class="t-who">Prof. Athira P, IIT Palakkad</span></li>
@@ -482,7 +489,7 @@
       <details class="day-block">
         <summary>Day 3 &middot; September 9</summary>
         <div class="agenda-body">
-          <div class="agenda-row"><span class="time">9:00 to 10:45 AM</span><span class="what">Session IV, Synergies Between Other Missions</span></div>
+          <div class="agenda-row"><span class="time">9:00 to 10:45 AM</span><span class="what">Session IV, Synergies Between Other Missions<em>Moderators: Iqlas and Kavita K</em></span></div>
           <ul class="talk-list">
             <li><span class="t-time">9:00 AM</span><span class="t-title">Satellite Based Lake Health Assessment and Emerging Opportunities With SWOT</span><span class="t-who">Dr. Nitish Kumar, IIT Bombay</span></li>
             <li><span class="t-time">9:20 AM</span><span class="t-title">Satellite Gravimetry and Altimetry, Complementary Observations of the Water Cycle</span><span class="t-who">Dr. Vasaw Tripathi, IIT Bombay</span></li>
@@ -615,10 +622,27 @@
       <span class="tag">Gallery</span>
       <h2>Moments From the Course</h2>
     </div>
-    <div class="cs-grid">
-      <div class="cs-card"><div class="icon">&#9635;</div><h3>Sessions</h3><span class="status">Coming Soon</span></div>
-      <div class="cs-card"><div class="icon">&#9635;</div><h3>Practical Labs</h3><span class="status">Coming Soon</span></div>
-      <div class="cs-card"><div class="icon">&#9635;</div><h3>Campus and Excursions</h3><span class="status">Coming Soon</span></div>
+    <div class="gallery-grid">
+      <figure class="gallery-item"><img src="swot1.jpg" alt="Inauguration Ceremony" loading="lazy"><figcaption>Inauguration Ceremony</figcaption></figure>
+      <figure class="gallery-item"><img src="swot2.jpg" alt="Group Photograph" loading="lazy"><figcaption>Group Photograph</figcaption></figure>
+      <!-- <figure class="gallery-item"><img src="swot3.jpg" alt="High Tea" loading="lazy"><figcaption>High Tea</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot4.jpg" alt="SWOT Overview Talk" loading="lazy"><figcaption>SWOT Overview Talk</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot5.jpg" alt="Keynote Address" loading="lazy"><figcaption>Keynote Address</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot6.jpg" alt="Session I, Rivers" loading="lazy"><figcaption>Session I, Rivers</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot7.jpg" alt="Session II, Oceans" loading="lazy"><figcaption>Session II, Oceans</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot8.jpg" alt="Session III, Lakes" loading="lazy"><figcaption>Session III, Lakes</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot9.jpg" alt="Session IV, Synergies" loading="lazy"><figcaption>Session IV, Synergies</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot10.jpg" alt="Panel Discussion" loading="lazy"><figcaption>Panel Discussion</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot11.jpg" alt="Networking and Gala Dinner" loading="lazy"><figcaption>Networking and Gala Dinner</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot12.jpg" alt="Tea Break" loading="lazy"><figcaption>Tea Break</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot13.jpg" alt="Q and A Session" loading="lazy"><figcaption>Q and A Session</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot14.jpg" alt="Working Group Discussion" loading="lazy"><figcaption>Working Group Discussion</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot15.jpg" alt="Field Trip Briefing" loading="lazy"><figcaption>Field Trip Briefing</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot16.jpg" alt="Bathymetry Survey Demonstration" loading="lazy"><figcaption>Bathymetry Survey Demonstration</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot17.jpg" alt="Ullas River Site Visit" loading="lazy"><figcaption>Ullas River Site Visit</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot18.jpg" alt="RTK Water Level Measurement" loading="lazy"><figcaption>RTK Water Level Measurement</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot19.jpg" alt="Closing Ceremony" loading="lazy"><figcaption>Closing Ceremony</figcaption></figure> -->
+      <!-- <figure class="gallery-item"><img src="swot20.jpg" alt="Group Photo With Speakers" loading="lazy"><figcaption>Group Photo With Speakers</figcaption></figure> -->
     </div>
   </div>
 </section>
@@ -658,6 +682,11 @@
       <div class="team-card">
         <img src="kavita-k.jpg" alt="Kavita K" class="team-photo">
         <h3>Kavita K</h3>
+        <div class="role">Field Coordinator</div>
+      </div>
+      <div class="team-card">
+        <img src="siddharth-yadav.jpg" alt="Siddharth Yadav" class="team-photo">
+        <h3>Siddharth Yadav</h3>
         <div class="role">Field Coordinator</div>
       </div>
     </div>
